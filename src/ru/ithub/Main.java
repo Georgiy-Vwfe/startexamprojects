@@ -3,7 +3,7 @@ package ru.ithub;
 public class Main {
 
     public static void main(String[] args) {
-        String str = "99999990";
+        String str = "9999909";
 
         System.out.println("Before: " + str);
         System.out.println("After: " + stringIncrement(str));
@@ -15,12 +15,10 @@ public class Main {
 
         if (lastChar >= '0' && lastChar < '9') {
             return withoutLastChar + (++lastChar);
+        } else if (!withoutLastChar.equals("")) {
+            return stringIncrement(withoutLastChar) + "0";
         } else {
-            if (!withoutLastChar.equals("")) {
-                return stringIncrement(withoutLastChar) + "0";
-            } else {
-                return "10";
-            }
+            return "10";
         }
     }
 }
